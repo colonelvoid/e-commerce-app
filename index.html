@@ -1,66 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HardwareHub - Premium Computer Parts & Peripherals</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>HardwareHub - Premium Computer Parts</title>
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="header">
-        <div class="logo">🔧 HardwareHub</div>
-        <nav class="navbar">
-            <a href="#" class="nav-link active">Home</a>
-            <a href="#" class="nav-link">Products</a>
-            <a href="#" class="nav-link">Categories</a>
-            <a href="#" class="nav-link">Deals</a>
-            <a href="#" class="nav-link">Support</a>
-        </nav>
-        <button class="cart-btn" onclick="showCart()">
-            🛒 Cart
-            <span class="cart-count" id="cartCount">0</span>
-        </button>
+
+<header>
+  <div class="logo">🔧 HardwareHub</div>
+  <nav>
+    <a href="#" class="active">Home</a>
+    <a href="#">Products</a>
+    <a href="#">Categories</a>
+    <a href="#">Deals</a>
+    <a href="#">Support</a>
+  </nav>
+  <button class="cart-btn" onclick="showCart()">
+    🛒 Cart <span id="cartCount" class="cart-count">0</span>
+  </button>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Premium Computer Parts</h1>
+    <p>Build your dream PC with the best components</p>
+  </section>
+
+  <section class="products" id="productsGrid">
+    <div class="product">
+      <img src="assets/images/rtx-5090.webp" alt="RTX 5090 Graphics Card" />
+      <h3>RTX 5090 Graphics Card</h3>
+      <p class="price">₹2,49,000</p>
+      <button onclick="addToCart('RTX 5090 Graphics Card', 249000)">Add to Cart</button>
     </div>
-
-    <div class="container">
-        <div class="hero">
-            <h1>Premium Computer Parts</h1>
-            <p>Build your dream PC with the best components</p>
-        </div>
-
-        <div class="products-grid" id="productsGrid"></div>
+    <div class="product">
+      <img src="assets/images/r9-9950x3d.jpg" alt="Ryzen 9 9950X Processor" />
+      <h3>Ryzen 9 9950X Processor</h3>
+      <p class="price">₹59,999</p>
+      <button onclick="addToCart('Ryzen 9 9950X Processor', 59999)">Add to Cart</button>
     </div>
+    <div class="product">
+      <img src="assets/images/rgb-keyboard.avif" alt="RGB Gaming Keyboard" />
+      <h3>RGB Gaming Keyboard</h3>
+      <p class="price">₹6,999</p>
+      <button onclick="addToCart('RGB Gaming Keyboard', 6999)">Add to Cart</button>
+    </div>
+    <!-- Add other products similarly here -->
+  </section>
+</main>
 
-    <div class="notification" id="notification">Added to cart! 🎉</div>
+<div id="notification">Added to cart! 🎉</div>
 
-    <section class="about-section">
-        <div class="about-container">
-            <h2>About HardwareHub</h2>
-            <p>Welcome to HardwareHub, your premier destination for high-performance computer parts and gaming peripherals. Since 2020, we've been helping PC enthusiasts, gamers, and professionals build their dream setups with top-tier components from leading brands.</p>
-            <div class="about-features">
-                <div class="feature">
-                    <div class="feature-icon">🚚</div>
-                    <h3>Fast Shipping</h3>
-                    <p>Free delivery on orders over $100</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">✓</div>
-                    <h3>Quality Guaranteed</h3>
-                    <p>100% authentic products with warranty</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">💬</div>
-                    <h3>Expert Support</h3>
-                    <p>24/7 customer service by tech specialists</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <p>&copy; 2025 HardwarerHub. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
