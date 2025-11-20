@@ -120,8 +120,6 @@ main
     border-radius: 4px;
 }
 
-
-
 .product .price
 {
     color: #667eea;
@@ -167,4 +165,86 @@ button:hover
 {
     opacity: 1;
     pointer-events: auto;
+}
+
+/* Mobile (up to 600px width) */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+    main {
+        padding: 1rem;
+        margin: 1rem;
+    }
+    .hero {
+        font-size: 1.15rem;
+        margin-bottom: 1rem;
+    }
+    .products {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .product {
+        max-width: 100%;
+        padding: 0.7rem;
+    }
+    .cart-btn {
+        font-size: 0.95rem;
+        padding: 0.3rem 0.7rem;
+        max-width: 90px;
+        height: 2rem;
+    }
+    #notification {
+        top: 0.5rem;
+        right: 0.5rem;
+        width: 90vw;
+        font-size: 0.95rem;
+        padding: 0.5rem;
+    }
+}
+
+/* Tablet (601px to 900px width) */
+@media (min-width: 601px) and (max-width: 900px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 1.5rem;
+    }
+    nav {
+        gap: 1.5rem;
+    }
+    main {
+        padding: 1.5rem;
+        margin: 1.5rem;
+        max-width: 95vw;
+    }
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    .product {
+        max-width: 360px;
+    }
+    #notification {
+        top: 0.7rem;
+        right: 0.7rem;
+        width: 60vw;
+        font-size: 1rem;
+        padding: 0.7rem;
+    }
+}
+
+/* Large screens: adjust grid gap for aesthetics */
+@media (min-width: 1100px) {
+    .products {
+        gap: 2.5rem;
+    }
 }
